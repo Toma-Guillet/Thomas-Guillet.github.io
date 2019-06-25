@@ -1,0 +1,110 @@
+.containerBox{
+    position: relative;
+
+    border: none;
+    border-radius: 1px;
+    border-bottom-right-radius: 15px;
+    border-left: solid 6px #1081E0;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+
+    overflow: hidden;
+    height: auto;
+    background-color: white;
+
+    box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, .2);
+
+    .header{
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 20px;
+        line-height: 20px;
+        background-color: black;
+        width: 100%;
+        color: white;
+        font-weight: bold;
+        font-size: 9px;
+        text-align: center;
+    }
+    .content{
+        position: relative;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: auto;
+
+        display: flex;
+
+        
+        .infos{
+            width: -webkit-fill-available;
+            padding: 10px;
+
+            .line{
+                display: flex;
+                justify-content: space-between;
+    
+                div{
+                    position: relative;
+    
+                    &.idDelivery{
+                        margin-left: auto;
+                    }
+                }
+            }
+            .cardType{
+                font-weight: bold;
+                font-size: 14px;
+            }
+            .idDelivery{
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .customerName{
+                font-weight: bold;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+            .cardAddress{
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+            .cardStatus{
+                line-height: 29px;
+                flex: auto;
+                margin-left: 10px;
+                color: #DD352E;
+                font-weight: bold;
+                font-size: 12px;
+            }
+            .cardSchedule{
+                border: solid 1px lightgrey;
+                border-radius: 5px;
+                color: grey;
+                text-align: center;
+                line-height: 29px;
+                padding: 0px 5px;
+                font-size: 14px;
+            }
+        }
+        a{
+            width: 16%;
+            margin-left: auto;
+            background-color: #ECECEC;
+            text-align: center;
+
+            .goTo{
+                position: relative;
+                height: 100%;
+                top: 0;
+                border: none;
+                background: none;
+                text-align: center;
+            } 
+        }
+    }
+}

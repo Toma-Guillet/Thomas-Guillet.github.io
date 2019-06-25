@@ -1,0 +1,16 @@
+.menuSidebar{
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: underline;
+    margin-top: 20%;
+    margin-left: 30%;
+
+    .bar{
+        background-color: white;
+        height: 1px;
+        width: 50%;
+        position: absolute;
+        margin-top: 6px;
+        left: -53px;
+    }
+}

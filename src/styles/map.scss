@@ -1,0 +1,120 @@
+.mapScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+
+  header {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+
+    button {
+      border: 1px solid black;
+      margin: 10px 0;
+      padding: 0 50px;
+      background-color: transparent;
+      line-height: 1;
+      font-size: 14px;
+
+      &:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+
+    .buttonActive {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    .buttonInactive {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  }
+
+  .mapComponent {
+    height: calc(100vh - (70px + 50px));
+    box-sizing: border-box;
+  }
+
+  .gmnoprint, .gm-control-active {
+    display: none;
+  }
+
+  .markerInfos {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    transition: .3s;
+
+    .title {
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .infos {
+      margin: 20px 0;
+      font-size: 12px;
+      display: grid;
+      grid-template-areas:
+        "a b"
+        "c c";
+
+      ul li {
+        list-style-type: none;
+      }
+
+      div:last-child {
+        margin-top: 30px;
+      }
+    }
+
+    button:last-child {
+      background-color: #000000;
+      color: #ffffff;
+      width: 100%;
+      padding: 15px 30px;
+    }
+  }
+
+  .exitButton {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 0;
+    background-color: transparent;
+
+    &::before, &::after {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background-color: #000000;
+      display: block;
+      position: absolute;
+      top: 11px;
+      left: -4px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

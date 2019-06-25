@@ -1,0 +1,256 @@
+.new {
+
+  header {
+    margin-top: 48px;
+    padding: 20px 0;
+    background-color: #F1F1F1;
+
+    ul li {
+      display: inline-block;
+      position: relative;
+      width: calc(100% / 3);
+
+      p:first-child {
+        font-size: 11px;
+        font-weight: bold;
+      }
+
+      p:last-child {
+        margin: 5px auto 0 auto;
+        background-color: #000000;
+        color: #ffffff;
+        width: 25px;
+        height: 25px;
+        line-height: 23px;
+        font-size: 14px;
+        z-index: 1;
+        position: relative;
+        font-weight: bold;
+      }
+
+      &:not(:first-child) {
+
+        &::after {
+          content: '';
+          width: 35%;
+          height: 1px;
+          background-color: #dbdbdb;
+          display: block;
+          position: absolute;
+          bottom: 12px;
+          left: 0;
+        }
+      }
+
+      &:not(:last-child) {
+
+        &::before {
+          content: '';
+          width: 35%;
+          height: 1px;
+          background-color: #dbdbdb;
+          display: block;
+          position: absolute;
+          bottom: 12px;
+          right: 0;
+        }
+      }
+    }
+
+    .activeStep {
+
+      p:last-child {
+        border: 2px solid #FFCD2A;
+      }
+    }
+
+    .inactiveStep {
+
+      p:first-child {
+        opacity: .3;
+      }
+
+      p:last-child {
+        border: 2px solid #f1f1f1;
+        opacity: .3;
+      }
+    }
+  }
+
+  main {
+    padding: 0 15px;
+    flex: 1;
+
+    form {padding-bottom: 100px;
+
+      h1 {
+        font-size: 20px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 16px;
+        margin: 20px 0;
+      }
+
+      input, select {
+        height: 40px;
+      }
+
+      .type {
+        display: flex;
+        justify-content: space-between;
+
+        .checkbox {
+          border: 1px solid black;
+          width: 45%;
+          height: 40px;
+          display: flex;
+
+          input {
+            position: absolute;
+            display: none;
+          }
+
+          label {
+            margin: auto;
+            font-size: 14px;
+
+            &::before {
+              content: '';
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              display: inline-block;
+              border: 1px solid black;
+              margin-right: 12px;
+            }
+          }
+
+          * {
+            display: inline-block;
+          }
+        }
+      }
+
+      .identity {
+
+        label {
+          font-size: 12px;
+          display: inline;
+        }
+      }
+
+      .volume {
+        display: flex;
+        justify-content: space-between;
+
+        .checkbox {
+          border: 1px solid black;
+          width: 45%;
+          height: 40px;
+          display: flex;
+
+          input {
+            position: absolute;
+            display: none;
+          }
+
+          label {
+            margin: auto;
+            font-size: 14px;
+          }
+
+          * {
+            display: inline-block;
+          }
+        }
+      }
+
+      .livraison {
+        border: 1px solid #000000;
+        padding: 10px;
+
+        input {
+          display: none;
+        }
+
+        label {
+          display: block;
+        }
+
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+      }
+
+      .checkboxBetween {
+        display: flex;
+        justify-content: flex-start;
+
+        input {
+          height: auto;
+          padding: 0;
+          width: auto;
+          margin: 0 10px 0 0;
+        }
+
+        &:not(:first-child) {
+          margin-top: 15px;
+        }
+      }
+
+      select {
+        border: 1px solid #000000;
+        background-color: transparent;
+        border-radius: 0;
+        width: 100%;
+        -webkit-appearance: none;
+        padding: 0 5px;
+      }
+
+      textarea {
+        border: 1px solid #000000;
+        resize: none;
+        width: 100%;
+        height: 150px;
+      }
+    }
+  }
+
+  .validation {
+    padding: 70px 15px;
+
+    img {
+      margin: auto;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    p:first-of-type {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #A3A3A3;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin: 20px 0;
+    }
+
+    select {
+      border: 1px solid #000000;
+      background-color: transparent;
+      border-radius: 0;
+      width: 100%;
+      -webkit-appearance: none;
+      padding: 0 5px;
+      height: 40px;
+    }
+
+    input {
+      font-size: 13px;
+    }
+  }
+}

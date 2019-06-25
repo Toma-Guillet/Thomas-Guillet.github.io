@@ -1,0 +1,23 @@
+input {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  border: 1px solid #000000;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: transparent;
+  line-height: 1;
+
+  &:not(:last-child) {
+    margin: 20px 0;
+  }
+}
+
+input[type="submit"] {
+  margin-top: 50px;
+  cursor: pointer;
+  color: #000000;
+  background-color: #FFCD2A;
+  border: 0;
+}
